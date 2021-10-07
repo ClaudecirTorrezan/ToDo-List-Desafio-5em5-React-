@@ -24,6 +24,18 @@ const App = () => {
     setList(newList);
   }
 
+  // Função feita para tarefinha de casa.  (copiei)
+  const handleTaskChange = (id: number, done: boolean) => {
+    let newList = [...list];
+    for(let i in newList) {
+      if(newList[i].id === id) {
+        newList[i].done = done;
+      }
+    }
+    setList(newList);
+  }
+
+
   return (
     <Comps.Container>
       <Comps.Area>
